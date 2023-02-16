@@ -11,6 +11,7 @@ Things that I've learned along the way and had to figure out
 - I ran into a problem when setting my variable and found that [I was "doing it wrong"](https://deepsource.io/gh/tsenart/vegeta/issue/SCC-S1021/occurrences)
 - Then I remembered that [I should also be validating user input](https://medium.com/@apzuk3/input-validation-in-golang-bc24cdec1835) prior to just passing it into my function
 - I had to [lookup](https://gobyexample.com/structs) how to use the `struct` properly 
+- I had to find a tutorial on [writing and running unit tests](https://www.digitalocean.com/community/tutorials/how-to-write-unit-tests-in-go-using-go-test-and-the-testing-package) in go
 
 
 # Questions
