@@ -15,7 +15,6 @@ type CoordinateDMS struct {
  *          a return of 30.26388888888889.
  *
  */
-func DmsToDd(degree string, minute string, second string) float64 {
 func DmsToDd(degree float32, minutes float32, seconds float32) float64 {
 
 	// @todo check for valid inputs
