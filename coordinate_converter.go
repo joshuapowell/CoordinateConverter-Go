@@ -1,9 +1,9 @@
 package coordinate_converter
 
 type CoordinateDMS struct {
-	Degree  string `validate:"required,string"`
-	Minutes string `validate:"required,string"`
-	Seconds string `validate:"required,string"`
+	Degree  float32 `validate:"required,float32"`
+	Minutes float32 `validate:"required,float32"`
+	Seconds float32 `validate:"required,float32"`
 }
 
 /**
