@@ -1,6 +1,20 @@
 # CoordinateConverter-Go
 
-# Learnings
+## Usage
+
+### Conversion
+```
+DmsToDd(30, 15, 50)
+
+    returns 30.26388888888889
+```
+
+### Testing
+```
+go test
+```
+
+## Learnings
 Things that I've learned along the way and had to figure out
 
 - [initializing a module](https://go.dev/doc/modules/managing-dependencies#naming_module)
@@ -13,7 +27,7 @@ Things that I've learned along the way and had to figure out
 - I had to find a tutorial on [writing and running unit tests](https://www.digitalocean.com/community/tutorials/how-to-write-unit-tests-in-go-using-go-test-and-the-testing-package) in go
 
 
-# Questions
+## Questions
 - [ ] What PEP8 and PEP257 equivalent linters exist for Go?
 - [ ] How can I call this module from a separate HTTP API?
 - [ ] How do I handle dependencies (e.g., go mod tidy)?
