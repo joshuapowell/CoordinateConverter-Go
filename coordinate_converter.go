@@ -11,6 +11,9 @@ type CoordinateDMS struct {
  *
  * @todo document this function's parameters and return value
  *
+ * Example: Given the inputs DmsToDd(30, 15, 50) we should expect
+ *          a return of 30.26388888888889.
+ *
  */
 func DmsToDd(degree string, minute string, second string) float64 {
 
