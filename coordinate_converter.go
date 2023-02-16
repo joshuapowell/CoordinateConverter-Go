@@ -17,7 +17,10 @@ type CoordinateDMS struct {
  */
 func DmsToDd(degree float32, minutes float32, seconds float32) float64 {
 
-	// @todo check for valid inputs
+	var coordinate_dms = CoordinateDMS{
+		Degree:  degree,
+		Minutes: minutes,
+		Seconds: seconds}
 
 	// @todo assign valid inputs to the CoordinateDMS struct
 
