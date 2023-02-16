@@ -1,4 +1,4 @@
-package greetings
+package coordinate_converter
 
 type CoordinateDMS struct {
 	Degree  string `validate:"required,string"`
@@ -24,5 +24,5 @@ func DmsToDd(degree string, minute string, second string) float64 {
 	//       latitude and longitude
 
 	// @todo return the newly converted decimal coordinate
-	return 40.123456789
+	return 30.2638888888
 }
