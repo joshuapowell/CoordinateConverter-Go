@@ -29,6 +29,5 @@ func DmsToDd(degree float32, minutes float32, seconds float32) float64 {
 	// @todo make sure that the converted decimal is between the max and min
 	//       latitude and longitude
 
-	// @todo return the newly converted decimal coordinate
-	return 30.2638888888
+	return coordinate_dd
 }
