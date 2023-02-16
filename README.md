@@ -3,7 +3,6 @@
 # Learnings
 Things that I've learned along the way and had to figure out
 
-- dependency management
 - [initializing a module](https://go.dev/doc/modules/managing-dependencies#naming_module)
 - [file naming conventions](https://medium.com/@kdnotes/golang-naming-rules-and-conventions-8efeecd23b68)
 - a variety of golang.org/x/tools/cmd/* tools needed to be installed in VSCode along the way
@@ -16,3 +15,5 @@ Things that I've learned along the way and had to figure out
 
 # Questions
 - [ ] What PEP8 and PEP257 equivalent linters exist for Go?
+- [ ] How can I call this module from a separate HTTP API?
+- [ ] How do I handle dependencies (e.g., go mod tidy)?
