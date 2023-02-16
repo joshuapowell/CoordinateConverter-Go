@@ -22,9 +22,9 @@ func DmsToDd(degree float32, minutes float32, seconds float32) float64 {
 		Minutes: minutes,
 		Seconds: seconds}
 
-	// @todo assign valid inputs to the CoordinateDMS struct
-
-	// @todo convert the struct to a single decimal (float64)
+	var coordinate_dd float64 = (float64(coordinate_dms.Degree) +
+		(float64(coordinate_dms.Minutes) / 60) +
+		(float64(coordinate_dms.Seconds) / 3600))
 
 	// @todo make sure that the converted decimal is between the max and min
 	//       latitude and longitude
