@@ -11,6 +11,8 @@ type CoordinateDMS struct {
  *
  * @todo document this function's parameters and return value
  *
+ * Math: (degrees) + (minutes/60) + (seconds/3600) = decimal degrees
+ *
  * Example: Given the inputs DmsToDd(30, 15, 50) we should expect
  *          a return of 30.26388888888889.
  *
