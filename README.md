@@ -25,6 +25,7 @@ Things that I've learned along the way and had to figure out
 - Then I remembered that [I should also be validating user input](https://medium.com/@apzuk3/input-validation-in-golang-bc24cdec1835) prior to just passing it into my function
 - I had to [lookup](https://gobyexample.com/structs) how to use the `struct` properly 
 - I had to find a tutorial on [writing and running unit tests](https://www.digitalocean.com/community/tutorials/how-to-write-unit-tests-in-go-using-go-test-and-the-testing-package) in go
+- I wanted to limit the minimum and maximum values of a `struct` (data structure), I found this [StackOverflow](JR102339)
 
 
 ## Questions
