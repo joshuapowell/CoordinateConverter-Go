@@ -36,10 +36,29 @@ func ConvertDmsToDd(degrees float32, minutes float32, seconds float32, direction
 /**
  * Convert Decimal Degrees (DD) to Degrees-Minutes-Seconds (DMS).
  *
- * Math: __unknown__
+ * Math:
+ *    Step 1: 30.26388888888889 » 30 degrees
+ *    Step 2: 0.26388888888889*60 = 15.8333333333 » 15 minutes
+ *    Step 3: 0.8333333333*60 = 49.999999998 » 50 Seconds
  *
+ * Example: Given the inputs ConvertDdToDms(30.26388888888889) we should
+ *          expect return of 30.26388888888889.
  */
-func ConvertDdToDms() string {
+func ConvertDdToDms(DecimalDegree float64, LatLng CoordinateType) string {
+
+	// @todo Degrees = Separate the whole number from the numbers after the
+	//       decimal
+
+	// @todo Minutes = Separate the whole number from the numbers after the
+	//       decminal
+
+	// @todo Seconds = Multiple the remaining number by 60'
+
+	// @todo Concatenate Degrees, Minutes, and Seconds
+
+	// @todo if LatLng is Latitude and less a negative number it's West
+
+	// @todo if LatLng is Longitude and less a negative number it's South
 
 	return ""
 }
