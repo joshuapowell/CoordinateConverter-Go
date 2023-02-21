@@ -1,11 +1,5 @@
 package coordinate_converter
 
-type CoordinateDMS struct {
-	Degree  float32 `validate:"required,float32"`
-	Minutes float32 `validate:"required,float32"`
-	Seconds float32 `validate:"required,float32"`
-}
-
 /**
  * Convert Degrees Minutes Seconds (DMS) to Decimal Degrees (DD)
  *
@@ -17,19 +11,35 @@ type CoordinateDMS struct {
  *          a return of 30.26388888888889.
  *
  */
-func DmsToDd(degree float32, minutes float32, seconds float32) float64 {
+func ConvertDmsToDd(degrees float32, minutes float32, seconds float32, direction Direction) float64 {
 
-	var coordinate_dms = CoordinateDMS{
-		Degree:  degree,
+	var coordinate_dms = CoordinatePartDMS{
+		Degrees: degrees,
 		Minutes: minutes,
 		Seconds: seconds}
 
-	var coordinate_dd float64 = (float64(coordinate_dms.Degree) +
+	var _calculated_dd float64 = (float64(coordinate_dms.Degrees) +
 		(float64(coordinate_dms.Minutes) / 60) +
 		(float64(coordinate_dms.Seconds) / 3600))
 
-	// @todo make sure that the converted decimal is between the max and min
-	//       latitude and longitude
+	var coordinate_dd = CoordinatePartDD{
+		DecimalDegree: _calculated_dd}
 
-	return coordinate_dd
+	// Negate _calculated_dd value when direction is 2 (South) or 3 (West)
+	if direction == 2 || direction == 3 {
+		coordinate_dd.DecimalDegree = -coordinate_dd.DecimalDegree
+	}
+
+	return coordinate_dd.DecimalDegree
+}
+
+/**
+ * Convert Decimal Degrees (DD) to Degrees-Minutes-Seconds (DMS).
+ *
+ * Math: __unknown__
+ *
+ */
+func ConvertDdToDms() string {
+
+	return ""
 }

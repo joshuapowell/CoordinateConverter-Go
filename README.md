@@ -1,12 +1,46 @@
-# CoordinateConverter-Go
+# Coordinate Converter for Go
+
+A simple coordinate converter, intended to be a relatively simple first 
+program to write in the Go language.
 
 ## Usage
 
 ### Conversion
+
+#### North Coordinate
+To convert a degrees-minutes-seconds or DMS coordinate of 30° 15' 50" N to
+it's decimal degree equivalent.
 ```
-DmsToDd(30, 15, 50)
+ConvertDmsToDd(30, 15, 50, North)
 
     returns 30.26388888888889
+```
+
+#### East Coordinate
+To convert a degrees-minutes-seconds or DMS coordinate of 57° 45' 02" E to
+it's decimal degree equivalent.
+```
+ConvertDmsToDd(57, 45, 02, East)
+
+    returns 57.75055555555556
+```
+
+#### South Coordinate
+To convert a degrees-minutes-seconds or DMS coordinate of 63° 19' 15" S to
+it's decimal degree equivalent.
+```
+ConvertDmsToDd(63, 19, 15, South)
+
+    returns -63.32083333333334
+```
+
+#### West Coordinate
+To convert a degrees-minutes-seconds or DMS coordinate of 57° 45' 02" W to
+it's decimal degree equivalent.
+```
+ConvertDmsToDd(57, 45, 02, West)
+
+    returns -57.75055555555556
 ```
 
 ### Testing
@@ -14,20 +48,3 @@ DmsToDd(30, 15, 50)
 go test
 ```
 
-## Learnings
-Things that I've learned along the way and had to figure out
-
-- [initializing a module](https://go.dev/doc/modules/managing-dependencies#naming_module)
-- [file naming conventions](https://medium.com/@kdnotes/golang-naming-rules-and-conventions-8efeecd23b68)
-- a variety of golang.org/x/tools/cmd/* tools needed to be installed in VSCode along the way
-- I had to look up [Go Data Types](https://www.tutorialspoint.com/go/go_data_types.htm) when I wanted to figure out how to return my decimal degree. Then after that I had to figure out what level of precision I wanted my method to support, so I found this [table](http://mysql.rjweb.org/doc.php/latlng).
-- I ran into a problem when setting my variable and found that [I was "doing it wrong"](https://deepsource.io/gh/tsenart/vegeta/issue/SCC-S1021/occurrences)
-- Then I remembered that [I should also be validating user input](https://medium.com/@apzuk3/input-validation-in-golang-bc24cdec1835) prior to just passing it into my function
-- I had to [lookup](https://gobyexample.com/structs) how to use the `struct` properly 
-- I had to find a tutorial on [writing and running unit tests](https://www.digitalocean.com/community/tutorials/how-to-write-unit-tests-in-go-using-go-test-and-the-testing-package) in go
-
-
-## Questions
-- [ ] What PEP8 and PEP257 equivalent linters exist for Go?
-- [ ] How can I call this module from a separate HTTP API?
-- [ ] How do I handle dependencies (e.g., go mod tidy)?
