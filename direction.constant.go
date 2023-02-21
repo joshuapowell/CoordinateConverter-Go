@@ -17,8 +17,8 @@ package coordinate_converter
 type Direction int64
 
 const (
-	North Direction = iota
-	East
-	South
-	West
+	North Direction = iota // Positive Coordinate Value
+	East                   // Positive Coordinate Value
+	South                  // Negative Coordinate Value
+	West                   // Negative Coordinate Value
 )
