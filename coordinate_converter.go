@@ -1,5 +1,14 @@
 package coordinate_converter
 
+type Direction int64
+
+const (
+	North Direction = iota
+	East
+	South
+	West
+)
+
 /**
  * A Coordinate
  */
