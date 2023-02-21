@@ -5,7 +5,7 @@ package coordinate_converter
  * coordinate pair in degrees-minutes-seconds or DMS notation.
  */
 type CoordinatePartDMS struct {
-	Degree  float32 `validate:"required,float32"`
+	Degrees float32 `validate:"required,float32"`
 	Minutes float32 `validate:"required,float32"`
 	Seconds float32 `validate:"required,float32"`
 }
