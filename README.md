@@ -6,7 +6,7 @@ A simple coordinate converter, intended to be a relatively simple first program 
 
 ### Conversion
 ```
-DmsToDd(30, 15, 50)
+ConvertDmsToDd(30, 15, 50, North)
 
     returns 30.26388888888889
 ```
