@@ -1,28 +1,5 @@
 package coordinate_converter
 
-type Direction int64
-
-const (
-	North Direction = iota
-	East
-	South
-	West
-)
-
-/**
- * A Coordinate
- */
-type Coordinate struct {
-	Latitude  string `validate:"required,string,min=-90,max=90"`
-	Longitude string `validate:"required,string,min=-180,max=180"`
-}
-
-type CoordinateDMS struct {
-	Degree  float32 `validate:"required,float32"`
-	Minutes float32 `validate:"required,float32"`
-	Seconds float32 `validate:"required,float32"`
-}
-
 /**
  * Convert Degrees Minutes Seconds (DMS) to Decimal Degrees (DD)
  *
