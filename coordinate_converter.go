@@ -1,5 +1,11 @@
 package coordinate_converter
 
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
+
 /**
  * Convert Degrees Minutes Seconds (DMS) to Decimal Degrees (DD)
  *
