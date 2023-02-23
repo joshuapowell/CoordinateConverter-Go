@@ -52,6 +52,18 @@ func ConvertDmsToDd(degrees float32, minutes float32, seconds float32, direction
  */
 func ConvertDdToDms(DecimalDegree float64, LatLng CoordinateType) string {
 
+	str1 := fmt.Sprint(DecimalDegree)
+
+	res1 := strings.Split(str1, ".")
+
+	var whole_number = res1[0]
+
+	// string to int
+	i, err := strconv.Atoi(whole_number)
+	if err != nil {
+		// ... handle error
+		panic(err)
+	}
 	// @todo Degrees = Separate the whole number from the numbers after the
 	//       decimal
 
