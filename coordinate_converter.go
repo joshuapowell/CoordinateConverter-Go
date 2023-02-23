@@ -64,6 +64,24 @@ func ConvertDdToDms(DecimalDegree float64, LatLng CoordinateType) string {
 		// ... handle error
 		panic(err)
 	}
+
+	var remainder = DecimalDegree - float64(i)
+
+	var second_remainder = (remainder * 60)
+
+	str2 := fmt.Sprint(second_remainder)
+
+	res2 := strings.Split(str2, ".")
+
+	var whole_number2 = res2[0]
+
+	// string to int
+	ii, err := strconv.Atoi(whole_number2)
+	if err != nil {
+		// ... handle error
+		panic(err)
+	}
+	var remainder2 = second_remainder - float64(ii)
 	// @todo Degrees = Separate the whole number from the numbers after the
 	//       decimal
 
