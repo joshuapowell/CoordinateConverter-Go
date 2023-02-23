@@ -82,6 +82,7 @@ func ConvertDdToDms(DecimalDegree float64, LatLng CoordinateType) string {
 		panic(err)
 	}
 	var remainder2 = second_remainder - float64(ii)
+
 	// @todo Degrees = Separate the whole number from the numbers after the
 	//       decimal
 
@@ -95,6 +96,13 @@ func ConvertDdToDms(DecimalDegree float64, LatLng CoordinateType) string {
 	// @todo if LatLng is Latitude and less a negative number it's West
 
 	// @todo if LatLng is Longitude and less a negative number it's South
+
+	// fmt.Println("Original Coordinate", num1)
+	// fmt.Println("Degree", whole_number)
+	// fmt.Println("Minutes", ii)
+	// fmt.Println("Seconds", int(remainder2*60))
+
+	fmt.Println(whole_number, "° ", ii, "' ", int(remainder2*60), "\"")
 
 	return ""
 }
